@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="RtlHardcoded">
+
+    <data>
+
+        <variable
+            name="module"
+            type="com.dfirago.jarvissmarthome.module.model.ModuleModel" />
+
+        <variable
+            name="presenter"
+            type="com.dfirago.jarvissmarthome.module.ModuleListPresenter" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{() -> presenter.onModuleSelected(module.ssid)}"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <!-- Text -->
+        <TextView
+            android:id="@+id/item_module_info_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/item_module_info_right_arrow"
+            android:text="@{module.ssid}"
+            android:textSize="18sp" />
+
+        <!--  Arrow -->
+        <ImageView
+            android:id="@+id/item_module_info_right_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5sp"
+            android:src="@drawable/ic_keyboard_arrow_right_black_36dp" />
+
+    </RelativeLayout>
+
+</layout>
+
+

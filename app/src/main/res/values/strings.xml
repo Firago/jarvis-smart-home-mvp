@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">JarvisSmartHome</string>
+    <string name="enter_password">Enter password</string>
+    <string name="ssid_label">SSID</string>
+    <string name="password_label">Password</string>
+    <string name="confirm_button_text">Confirm</string>
+</resources>
