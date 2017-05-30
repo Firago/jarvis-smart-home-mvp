@@ -111,6 +111,10 @@ public class ModuleListActivity extends AppCompatActivity implements ModuleListV
     @Override
     public void onRegisterModuleFinished() {
         binding.moduleSwipeRefresh.setRefreshing(false);
+    }
+
+    @Override
+    public void onRegisterModuleSuccess() {
         Toast.makeText(getApplicationContext(), "Module added successfully", Toast.LENGTH_LONG).show();
     }
 

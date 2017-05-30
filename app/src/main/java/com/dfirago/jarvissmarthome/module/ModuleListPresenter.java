@@ -54,7 +54,10 @@ public class ModuleListPresenter extends BasePresenter<ModuleListView> {
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .doOnSubscribe(disposable -> view().onRegisterModuleStarted())
-                .subscribe(result -> view().onRegisterModuleFinished(), error -> {
+                .subscribe(result -> {
+                    view().onRegisterModuleFinished();
+                    view().onRegisterModuleSuccess();
+                }, error -> {
                     view().onRegisterModuleFinished();
                     view().onRegisterModuleError();
                 });

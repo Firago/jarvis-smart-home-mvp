@@ -24,5 +24,7 @@ public interface ModuleListView {
 
     void onRegisterModuleFinished();
 
+    void onRegisterModuleSuccess();
+
     void onRegisterModuleError();
 }
